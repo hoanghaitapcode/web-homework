@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dealers - Giao Diện Nâng Cấp</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style type="text/tailwindcss">
+      @layer base {
+        /* Phông chữ cách điệu cho Logo và Tiêu đề chính */
+        .font-title {
+          font-family: "Playfair Display", serif;
+        }
+        /* Phông chữ hiện đại cho nội dung */
+        body {
+          font-family: "Inter", sans-serif;
+        }
+      }
+
+      /* Tùy chỉnh cho nút chính: Buy this deal */
+      .buy-deal-button {
+        /* Gradient nhẹ nhàng */
+        background-image: linear-gradient(to bottom, #86d258, #60ab33);
+        color: white;
+        padding: 12px 16px;
+        border-radius: 6px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+        /* Box shadow 3D sâu hơn */
+        box-shadow: 0 4px 0 #4c8a29, 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.2s ease-in-out;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+      }
+      .buy-deal-button:hover {
+        background-image: linear-gradient(to bottom, #90e060, #6fb03f);
+        box-shadow: 0 2px 0 #4c8a29, 0 0 10px rgba(134, 210, 88, 0.5);
+        transform: translateY(2px);
+      }
+
+      /* Nút phụ: SEE DEAL */
+      .see-deal-button {
+        background-color: #7cc24a;
+        color: white;
+        padding: 5px 12px;
+        border-radius: 4px;
+        font-weight: 600;
+        box-shadow: 0 2px 0 #589b2b;
+        transition: all 0.2s;
+      }
+      .see-deal-button:hover {
+        background-color: #6fb03f;
+        box-shadow: 0 1px 0 #589b2b;
+        transform: translateY(1px);
+      }
+    </style>
+  </head>
+  <body class="bg-[#fcfcfc]">
+    <div class="max-w-7xl mx-auto bg-white shadow-2xl">
+      <div class="bg-red-600 py-3 px-6 text-center border-b border-red-700">
+        <div
+          class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-end items-center text-white text-sm"
+        >
+          <p class="font-semibold mb-2 sm:mb-0 sm:mr-4 flex items-center">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+              />
+              <path
+                d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+              />
+            </svg>
+            Sign up for free to get the best deals directly to your mailbox
+          </p>
+          <form
+            class="flex border border-red-400 shadow-md rounded-sm overflow-hidden w-full sm:w-auto"
+          >
+            <input
+              type="email"
+              placeholder="Enter Your E-mail Address"
+              class="p-1 text-sm text-gray-800 focus:outline-none focus:ring-1 focus:ring-red-300 w-full"
+              required
+            />
+            <button
+              type="submit"
+              class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 font-semibold text-sm transition duration-150 ease-in-out whitespace-nowrap"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <header class="p-6">
+        <div class="mb-4">
+          <h1
+            class="font-title text-5xl font-extrabold italic text-gray-800 leading-none"
+          >
+            Dealers
+          </h1>
+        </div>
+
+        <nav
+          class="flex justify-start text-gray-700 text-sm border-b border-gray-200 pb-2 overflow-x-auto whitespace-nowrap font-semibold"
+        >
+          <a
+            href="#"
+            class="px-3 py-1 hover:text-red-500 border-r border-gray-300"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="px-3 py-1 hover:text-red-500 border-r border-gray-300"
+            >About</a
+          >
+          <a href="#" class="px-3 py-1 text-red-600 border-r border-gray-300"
+            >All Deals</a
+          >
+          <a
+            href="#"
+            class="px-3 py-1 hover:text-red-500 border-r border-gray-300"
+            >Submit Your Deal</a
+          >
+          <a href="#" class="px-3 py-1 hover:text-red-500">✉️</a>
+        </nav>
+      </header>
+
+      <main class="p-6 md:flex md:space-x-8">
+        <div class="md:w-3/4">
+          <h2 class="font-title text-3xl font-bold mb-4 text-gray-800">
+            This is one very amazing deal
+          </h2>
+          <div class="bg-red-500 h-96 w-full mb-4 rounded-lg shadow-xl"></div>
+          <p class="text-gray-600 text-base leading-relaxed mb-10">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+
+        <aside
+          class="md:w-1/4 mt-8 md:mt-0 p-4 border border-gray-200 rounded-lg shadow-lg bg-white"
+        >
+          <div class="text-center pb-4 border-b border-gray-300">
+            <p class="text-sm mb-2 text-gray-500">This deal will end in:</p>
+            <div class="text-2xl font-bold text-gray-800">
+              6 days 1 hrs 52 min 51 sec
+            </div>
+          </div>
+
+          <div class="text-center py-4 border-b border-gray-300">
+            <p class="text-lg text-gray-500 font-semibold mb-2">DISCOUNT</p>
+            <div
+              class="text-7xl font-extrabold text-green-600 leading-none mb-4 tracking-tight"
+            >
+              43%
+            </div>
+            <div
+              class="flex justify-around text-xs font-semibold text-gray-700"
+            >
+              <div>
+                <p class="text-gray-500">DEAL VALUE</p>
+                <p class="text-lg font-bold text-red-500">$47</p>
+              </div>
+              <div>
+                <p class="text-gray-500">YOU SAVE</p>
+                <p class="text-lg font-bold text-green-500">$20</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex justify-center space-x-2 py-4 border-b border-gray-300"
+          >
+            <a
+              href="#"
+              class="bg-blue-400 hover:bg-blue-500 text-white text-xs px-2 py-1 rounded shadow-md transition duration-150"
+            >
+              🐦 Tweet 9
+            </a>
+            <a
+              href="#"
+              class="bg-blue-800 hover:bg-blue-900 text-white text-xs px-2 py-1 rounded shadow-md transition duration-150"
+            >
+              👍 Like 5
+            </a>
+          </div>
+
+          <div class="text-center pt-4">
+            <a href="#" class="buy-deal-button"> BUY THIS DEAL - 27$ </a>
+          </div>
+        </aside>
+      </main>
+
+      <section class="p-6">
+        <div
+          class="flex justify-around items-center my-8 py-4 border-t border-b border-gray-300"
+        >
+          <div
+            class="font-title text-3xl font-bold text-gray-300 hover:text-gray-500 transition duration-300"
+          >
+            Dealers
+          </div>
+          <div
+            class="font-title text-xl font-bold text-gray-300 hidden sm:block hover:text-gray-500"
+          >
+            THEMES KINGDOM
+          </div>
+          <div
+            class="font-title text-xl font-bold text-gray-300 hover:text-gray-500"
+          >
+            DovesMedic
+          </div>
+          <div
+            class="font-title text-xl font-bold text-gray-300 hidden md:block hover:text-gray-500"
+          >
+            Sm
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8">
+          <div
+            class="p-3 border border-gray-200 bg-white shadow-md hover:shadow-lg transition duration-300"
+          >
+            <h3 class="font-semibold text-base text-gray-800 mb-2">
+              Lorem Ipsum - Dolor Deal
+            </h3>
+            <div
+              class="bg-red-400 h-28 w-full mb-3 shadow-inner rounded-sm"
+            ></div>
+            <div
+              class="flex justify-between text-xs mb-1 font-normal text-gray-600"
+            >
+              <p>Deal Value: <span class="font-bold text-black">$47</span></p>
+              <p>Discount: <span class="font-bold text-black">43%</span></p>
+              <p>You Save: <span class="font-bold text-black">$20</span></p>
+            </div>
+            <div
+              class="flex justify-between items-center text-xs pt-2 border-t border-gray-100"
+            >
+              <p class="text-gray-500">71 days 23 hrs 38 min</p>
+              <a href="#" class="see-deal-button">SEE DEAL</a>
+            </div>
+          </div>
+          <div
+            class="p-3 border border-gray-200 bg-white shadow-md hover:shadow-lg transition duration-300"
+          >
+            <h3 class="font-semibold text-base text-gray-800 mb-2">
+              Lorem Ipsum - Dolor Deal
+            </h3>
+            <div
+              class="bg-red-400 h-28 w-full mb-3 shadow-inner rounded-sm"
+            ></div>
+            <div
+              class="flex justify-between text-xs mb-1 font-normal text-gray-600"
+            >
+              <p>Deal Value: <span class="font-bold text-black">$47</span></p>
+              <p>Discount: <span class="font-bold text-black">43%</span></p>
+              <p>You Save: <span class="font-bold text-black">$20</span></p>
+            </div>
+            <div
+              class="flex justify-between items-center text-xs pt-2 border-t border-gray-100"
+            >
+              <p class="text-gray-500">71 days 23 hrs 38 min</p>
+              <a href="#" class="see-deal-button">SEE DEAL</a>
+            </div>
+          </div>
+          <div
+            class="p-3 border border-gray-200 bg-white shadow-md hover:shadow-lg transition duration-300"
+          >
+            <h3 class="font-semibold text-base text-gray-800 mb-2">
+              Lorem Ipsum - Dolor Deal
+            </h3>
+            <div
+              class="bg-red-400 h-28 w-full mb-3 shadow-inner rounded-sm"
+            ></div>
+            <div
+              class="flex justify-between text-xs mb-1 font-normal text-gray-600"
+            >
+              <p>Deal Value: <span class="font-bold text-black">$47</span></p>
+              <p>Discount: <span class="font-bold text-black">43%</span></p>
+              <p>You Save: <span class="font-bold text-black">$20</span></p>
+            </div>
+            <div
+              class="flex justify-between items-center text-xs pt-2 border-t border-gray-100"
+            >
+              <p class="text-gray-500">71 days 23 hrs 38 min</p>
+              <a href="#" class="see-deal-button">SEE DEAL</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 mt-8">
+          <div>
+            <h4 class="font-title font-bold text-lg text-gray-800 mb-3">
+              About Our Deals
+            </h4>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-title font-bold text-lg text-gray-800 mb-3">
+              Twitter Buzz
+            </h4>
+            <div class="text-sm mb-2 pb-2 border-b border-gray-100">
+              <p
+                class="text-gray-700 hover:text-red-500 transition duration-150"
+              >
+                7 Photoshop tips for designing clean and modern websites su
+                p#truOpp
+              </p>
+              <p class="text-xs text-green-600 mt-1">1 Day Ago</p>
+            </div>
+            <div class="text-sm">
+              <p
+                class="text-gray-700 hover:text-red-500 transition duration-150"
+              >
+                7 Photoshop tips for designing clean and modern websites su
+                p#truOpp
+              </p>
+              <p class="text-xs text-green-600 mt-1">1 Day Ago</p>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-title font-bold text-lg text-gray-800 mb-3">
+              Other Pages
+            </h4>
+            <ul class="text-sm space-y-1">
+              <li>
+                <a href="#" class="text-gray-600 hover:text-red-500">Home</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-600 hover:text-red-500"
+                  >About Our Deals</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-600 hover:text-red-500"
+                  >All Deals</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-600 hover:text-red-500">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <footer
+        class="text-center py-6 mt-10 border-t border-gray-200 text-xs text-gray-500 bg-[#f7f7f7]"
+      >
+        <p>Copyright Information Goes Here 2012. All Rights Reserved.</p>
+        <p class="mt-1">
+          Designed By:
+          <span class="font-bold text-gray-700">Themes Kingdom</span>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
